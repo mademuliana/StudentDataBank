@@ -1,0 +1,82 @@
+#content {
+	background-color : white;
+	width  : 100%;
+	height : auto:
+}
+.flex-container {
+  display: flex;
+  justify-content: center;
+}
+
+.flex-container>div {
+  margin: 20px;
+  text-align: center;
+  line-height: 75px;
+}
+div.hot {
+	padding:9px 12px;
+	font-size:14px;
+	line-height:1;
+	font-weight:bold;
+	position:relative;
+	top:-550px;
+}
+.hot{
+	background-color : blue;
+	width:200px;
+}
+.kotak {
+	border: 1px solid white;
+	position: relative;
+	right: -18px;
+}
+input {
+	position: relative;
+	top: -20px;
+	background-color: #549bf3;
+	color: white;
+	border-radius: 10px;
+}
+.bacotan {
+	border: solid #f1eced 2px;
+	background-color:#f1eced;
+	position: relative;
+	top: -30px;
+}
+.bacotan2 p {
+	margin: 0;
+	font-size: 12px;
+	padding: 5px 12px;
+	font-weight: 400;
+	border-bottom: 1px solid #dadada;
+}
+.bacotan2 {
+	text-decoration: none !important;
+}
+p {
+	line-height: 1.8;
+	letter-spacing: 0.3px;
+}
+.kotak1 {
+	border: 1px solid white;
+	position: relative;
+	right: 	-10px;
+}
+
+#content3 {
+  padding: 16px;
+  height: 1800px;
+}
+
+@media only screen and (max-width: 500px){
+    .kotak1 .bacotan .bacotan2 {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 700px){
+    .kotak1 .bacotan .bacotan2{
+        width: 100%;
+    }
+}
+

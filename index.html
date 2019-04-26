@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="css/nav.css">
+    <link rel="stylesheet" type="text/css" href="css/search.css">
+    <link rel="stylesheet" type="text/css" href="css/filterlist.css">
+    <link rel="stylesheet" type="text/css" href="css/slideshow.css">
+    <link rel="stylesheet" type="text/css" href="css/style1.css">
+    <link rel="stylesheet" type="text/css" href="css/top.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style type="text/css">
+      .parallax1 {   
+        background-image:url(img/bg/ilustrasi.jpg)  ; 
+        min-height:600px;
+        background-attachment:fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size:  cover;
+      } 
+      @media only screen and (max-device-width: 1024px) {  
+          .parallax {  
+            background-attachment: scroll;  
+        }  
+      }
+
+      /* Style inputs */
+      input[type=text], input[type=email], select, textarea {
+          width: 100%;
+          padding: 12px;
+          border: 1px solid #ccc;
+          margin-top: 6px;
+          margin-bottom: 16px;
+          resize: vertical;
+      }
+
+      input[type=reset] {
+          background-color: #4CAF50;
+          color: white;
+          padding: 12px 20px;
+          border: none;
+          cursor: pointer;
+      }
+
+      input[type=reset]:hover {
+          background-color: #45a049;
+      }
+
+      /* Style the container/contact section */
+      .container {
+          border-radius: 5px;
+          background-color: #f2f2f2;
+          padding: 10px;
+      }
+
+      /* Create two columns that float next to eachother */
+      .column {
+          float: left;
+          width: 50%;
+          margin-top: 6px;
+          padding: 20px;
+      }
+
+      /* Clear floats after the columns */
+      .row:after {
+          content: "";
+          display: table;
+          clear: both;
+      }
+
+      /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+      @media (max-width: 600px) {
+          .column, input[type=submit] {
+              width: 100%;
+              margin-top: 0;
+          }
+      }
+
+      #snackbar {
+          visibility: hidden;
+          min-width: 250px;
+          margin-left: -125px;
+          background-color: #006666;
+          color: #80ffff;
+          text-align: center;
+          border-radius: 2px;
+          padding: 16px;
+          position: fixed;
+          z-index: 1;
+          left: 50%;
+          bottom: 30px;
+          font-size: 17px;
+      }
+
+      #snackbar.show {
+          visibility: visible;
+          -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+          animation: fadein 0.5s, fadeout 0.5s 2.5s;
+      }
+
+      @-webkit-keyframes fadein {
+          from {bottom: 0; opacity: 0;} 
+          to {bottom: 30px; opacity: 1;}
+      }
+
+      @keyframes fadein {
+          from {bottom: 0; opacity: 0;}
+          to {bottom: 30px; opacity: 1;}
+      }
+
+      @-webkit-keyframes fadeout {
+          from {bottom: 30px; opacity: 1;} 
+          to {bottom: 0; opacity: 0;}
+      }
+
+      @keyframes fadeout {
+          from {bottom: 30px; opacity: 1;}
+          to {bottom: 0; opacity: 0;}
+      }
+    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+
+  <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="index.html"><i class="fa fa-home"></i>&nbsp;Home</a>
+    <a href="top.html"><i class="fa fa-star"></i>&nbsp;Data Master</a>
+    <a href="tabel.html"><i class="fa fa-percent"></i>&nbsp;Daftar Siswa</a>
+    <a href="about.html"><i class="fa fa-user"></i>&nbsp;Nilai Raport Kelas 10</a>
+    <a href="about.html"><i class="fa fa-user"></i>&nbsp;Nilai Raport Kelas 11</a>
+    <a href="about.html"><i class="fa fa-user"></i>&nbsp;Nilai Raport Kelas 12</a>
+    <a href="login1.html"><i class="fa fa-user"></i>&nbsp;Logout</a>
+  </div>
+
+  <div id="main">
+    <span style="font-size:30px;cursor:pointer;" onclick="openNav()">&#9776; &nbsp; <img src="pic/log.png" style="width: auto; height: 28px;"></span>
+    </a>
+  </div>
+
+  <div id="content">
+    <br />
+    <br />
+    <br />
+     <marquee scrolldelay="100" direction="left" behavior="alternate" class="m">WELCOME IN STUDENT DATA BANK</marquee>
+
+    <div class="slideshow-container">
+
+      <div class="mySlides fade">
+        <div class="numbertext">1 / 3</div>
+        <img src="pic/software-legal-ilegal-img.jpg" style="width:100%">
+        <div class="text">INPUT DATA SECARA ONLINE</div>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext">2 / 3</div>
+        <img src="pic/data-recovsery.jpg" style="width:100%">
+        <div class="text">TIDAK TAKUT DENGAN HILANGNYA DATA</div>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext">3 / 3</div>
+        <img src="pic/Keep-It-Simple-Website.png" style="width:100%">
+        <div class="text">SIMPLE</div>
+      </div>
+
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+      </div>
+      <br>
+
+      <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span> 
+        <span class="dot" onclick="currentSlide(2)"></span> 
+        <span class="dot" onclick="currentSlide(3)"></span> 
+      </div>
+
+      
+
+    <br />
+
+    <center>
+      <form>
+        <h2>Cari Disini</h2>
+        <input type="text" name="search" placeholder="Search..">
+      </form>
+    </center>
+
+    <div class="top">
+        <div class="top1">
+            <p>Apa saja kemudahan yang diberikan Student Data Bank kepada anda?</p>
+        </div>
+    </div>
+
+    <br>
+
+    <div class="parallax1">
+      <h1>
+      <center>
+        <br><br><br><br><br><br>
+        <img src="pic/log.png" style="width: 300px; height: auto;">
+      </center>
+      </h1>
+    </div>
+
+
+
+    <div class="gal1">
+              <p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Apa itu Student Data Bank? Student Data Bank </p>
+           (diisi sesuai di poster promosi masukin sini)
+          </div>
+        </div>
+      </div>
+    
+  </div>
+
+  <hr>
+
+  <div class="knee">
+      <div class="knee1">
+          <div class="tip">
+              <h1 class="ls">Simak Video Kami Ya</h1>
+              <hr>
+          </div>
+
+          <div class="video">
+            <h2> <img src="icon/video.png" style="width:50px; height:30px; margin-right: 10px;">Featured Video</h2>
+            <hr>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/hwexZ1hYGKs" frameborder="0" allowfullscreen></iframe>
+            
+          </div>
+      </div>
+  </div>
+
+  <div class="container">
+    <div style="text-align:center">
+      <h2>Contact Us</h2>
+      <p>Berilah pesan kepada kami. Satu pesan anda sangat berarti bagi kami</p>
+    </div>
+    <div class="row">
+      <div class="column">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.2990956154067!2d107.62815931476469!3d-6.973995670226654!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd6285c5b7da517%3A0x864485f26a388f95!2sUniversitas+Telkom!5e0!3m2!1sid!2sid!4v1512573061837" width="600" height="450" frameborder="0" style="border:0" allowfullscreen style="width:100%;height:500px"></iframe>
+      </div>
+      <div class="column">
+        <form>
+          <label for="fname">Nama Anda</label>
+          <input type="text" id="fname" name="firstname" placeholder="Nama Anda">
+          <label for="lname">Email</label>
+          <input type="email" id="lname" name="lastname" placeholder="Email Anda">
+          <label for="country">Jenis Kelamin</label>
+          <select id="country" name="country">
+            <option value="australia">Pria</option>
+            <option value="canada">Wanita</option>
+          </select>
+          <label for="subject">Pesan</label>
+          <textarea id="subject" name="subject" placeholder="Write something.." style="height:170px"></textarea>
+          <input type="reset" value="Submit" onclick="myFunction()">
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div id="snackbar">Masukkan Anda Telah Kami Terima. Terima Kasih :) </div>
+
+  <div class="footer">
+    <div class="gbr">
+        <img src="pic/log.png">
+        <div class="media">
+          <img src="icon/go+.png" style="width: 50px; height: auto;">
+          <img src="icon/linr.png" style="width: 50px; height: auto;">
+          <img src="icon/youfix.png" style="width: 50px; height: auto;">
+        </div>
+    </div>
+  </div>
+
+       <script type="text/javascript" src="js/nav.js"></script>
+       <script type="text/javascript" src="js/search.js"></script>
+       <script type="text/javascript" src="js/filter.js"></script>
+       <script type="text/javascript" src="js/slideshow.js"></script>
+       <script>
+          // Initialize google maps
+          function myMap() {
+            var myCenter = new google.maps.LatLng(51.508742,-0.120850);
+            var mapCanvas = document.getElementById("map");
+            var mapOptions = {center: myCenter, zoom: 12};
+            var map = new google.maps.Map(mapCanvas, mapOptions);
+            var marker = new google.maps.Marker({position:myCenter});
+            marker.setMap(map);
+          }
+          </script>
+
+          <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu-916DdpKAjTmJNIgngS6HL_kDIKU0aU&callback=myMap"></script>
+
+          <script>
+            function myFunction() {
+                var x = document.getElementById("snackbar")
+                x.className = "show";
+                setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+            }
+          </script>
+  </body>
+</html>

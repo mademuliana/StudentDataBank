@@ -1,0 +1,139 @@
+
+
+div.gallery1 {
+    border: 1px solid #ccc;
+    border-radius: 7px;
+}
+
+div.gallery1:hover {
+    border: 3px solid #527a7a;
+    border-radius: 7px;
+}
+
+div.gallery1 img {
+    width: 50%;
+    height: auto;
+    float: left;
+    margin-right: 10px;
+}
+
+div.gallery1 p {
+    color: #003333;
+    font-family: aharoni;
+    text-align: justify;
+    margin-right: 10px;
+    font-size: 20px;
+}
+
+div.desc {
+    padding: 15px;
+    text-align: center;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.harga  {
+    float: right;
+    border: 5px dotted #bbb;
+    width: 200px;
+}
+
+.harga p  {
+    font-size: 20px;
+    color: #ffcc00;
+}
+
+.time  {
+    float: left;
+}
+
+.time p{
+    margin-left: 10px;
+    font-size: 20px;
+}
+
+.addres { 
+    width: 70px;
+    height: 50px;
+    margin: auto;
+}
+
+.addres p {
+    font-family: century;
+    float: left;
+}
+
+.responsive1 {
+    margin-top: 7px;
+    padding: 0 6px;
+    float: left;
+    width: 32%;
+}
+
+.responsive1 {
+    margin-top: 7px;
+    padding: 0 6px;
+    float: left;
+    width: 90%;
+}
+
+.pag {
+                margin-top: 10px;
+                width: 100%;
+                height: auto;
+                text-align: center;
+            }
+
+            .pagination {
+                display: inline-block;
+            }
+
+            .pagination a {
+                text-decoration: none;
+                float: left;
+                padding: 8px 16px;
+                border: 1px solid #ddd;
+                margin: 0 4px;
+                color: black;
+                transition:background-color .3s;
+            }
+
+            .pagination a:first-child {
+                border-top-left-radius: 5px;
+                border-bottom-left-radius: 5px;
+            }
+
+            .pagination a:hover {
+                background-color: #00cccc;
+                color: #006666;
+                border: 1px solid blue;
+            }
+
+            .pagination a:last-child {
+                border-top-right-radius: 5px;
+                border-bottom-right-radius: 5px;
+            }
+
+            .pagination a.active {
+                background-color: #00cccc;
+                color: #006666;
+                border: 1px solid blue;
+            }
+
+
+
+.gal1 {
+    width: 70%;
+    height: auto;
+    margin: auto;
+    margin-top: 30px;
+    padding: 10px;
+}
+
+#content1 {
+  padding: 16px;
+  height: 5000px;
+}
+
